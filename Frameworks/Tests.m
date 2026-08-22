@@ -7,6 +7,10 @@
 @interface Tests : XCTestCase
 @end
 
+@interface GCDWebUploader (Tests)
+- (GCDWebServerResponse*)uploadFile:(GCDWebServerMultiPartFormRequest*)request;
+@end
+
 @implementation Tests
 
 - (void)testWebServer {
@@ -22,6 +26,20 @@
 - (void)testWebUploader {
   GCDWebUploader* server = [[GCDWebUploader alloc] init];
   XCTAssertNotNil(server);
+}
+
+- (void)testWebUploaderRejectsRequestWithoutFile {
+  GCDWebUploader* server = [[GCDWebUploader alloc] initWithUploadDirectory:NSTemporaryDirectory()];
+  NSURL* url = [NSURL URLWithString:@"http://localhost/upload"];
+  NSDictionary* headers = @{
+    @"Accept" : @"application/json",
+    @"Content-Type" : @"multipart/form-data; boundary=boundary"
+  };
+  GCDWebServerMultiPartFormRequest* request = [[GCDWebServerMultiPartFormRequest alloc] initWithMethod:@"POST" url:url headers:headers path:@"/upload" query:@{}];
+
+  GCDWebServerResponse* response = [server uploadFile:request];
+
+  XCTAssertEqual(response.statusCode, kGCDWebServerHTTPStatusCode_BadRequest);
 }
 
 - (void)testPaths {
