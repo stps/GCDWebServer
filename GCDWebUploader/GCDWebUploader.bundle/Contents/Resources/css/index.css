@@ -128,3 +128,168 @@
 .uploading {
   display: none;
 }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #e6e8ec;
+    background-color: #16181c;
+  }
+
+  a {
+    color: #8abfff;
+  }
+
+  a:hover,
+  a:focus {
+    color: #b4d8ff;
+  }
+
+  .page-header,
+  .panel-default,
+  .modal-content,
+  .modal-header,
+  .modal-footer,
+  .table > tbody > tr > td {
+    border-color: #3a3f48;
+  }
+
+  .panel,
+  .modal-content {
+    background-color: #202329;
+  }
+
+  .panel-default > .panel-heading {
+    color: #d0d4dc;
+    background-color: #292d35;
+    background-image: none;
+    border-color: #3a3f48;
+  }
+
+  .breadcrumb > .active {
+    color: #d0d4dc;
+  }
+
+  .breadcrumb > li + li:before,
+  .footer {
+    color: #9ca3af;
+  }
+
+  .table-striped > tbody > tr:nth-child(odd) > td {
+    background-color: #242830;
+  }
+
+  .btn {
+    background-image: none;
+    text-shadow: none;
+  }
+
+  .btn-default {
+    color: #e6e8ec;
+    background-color: #30353d;
+    border-color: #555e6b;
+  }
+
+  .btn-default:hover,
+  .btn-default:focus,
+  .btn-default:active,
+  .btn-default.active {
+    color: #fff;
+    background-color: #3e4652;
+    border-color: #738196;
+  }
+
+  .btn-primary {
+    background-color: #285f96;
+    border-color: #4c8dca;
+  }
+
+  .btn-primary:hover,
+  .btn-primary:focus,
+  .btn-primary:active,
+  .btn-primary.active {
+    background-color: #3277b9;
+    border-color: #6aa9e6;
+  }
+
+  .btn-success {
+    background-color: #255b34;
+    border-color: #47875a;
+  }
+
+  .btn-success:hover,
+  .btn-success:focus,
+  .btn-success:active,
+  .btn-success.active {
+    background-color: #2f7342;
+    border-color: #63a577;
+  }
+
+  .btn-danger {
+    background-color: #872f32;
+    border-color: #b24c50;
+  }
+
+  .btn-danger:hover,
+  .btn-danger:focus,
+  .btn-danger:active,
+  .btn-danger.active {
+    background-color: #a43c40;
+    border-color: #c35c60;
+  }
+
+  .btn-warning {
+    background-color: #73521e;
+    border-color: #a87a31;
+  }
+
+  .btn-warning:hover,
+  .btn-warning:focus,
+  .btn-warning:active,
+  .btn-warning.active {
+    background-color: #896324;
+    border-color: #c49547;
+  }
+
+  input[type="text"],
+  .edit input {
+    color: #e6e8ec;
+    background-color: #16181c;
+    border: 1px solid #555e6b;
+  }
+
+  input[type="text"]:focus,
+  .edit input:focus {
+    border-color: #8abfff;
+    outline-color: #8abfff;
+  }
+
+  .close {
+    color: #e6e8ec;
+    text-shadow: none;
+    opacity: 0.7;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #fff;
+    opacity: 1;
+  }
+
+  .progress {
+    background-color: #343b46;
+    background-image: none;
+  }
+
+  .progress-bar {
+    background-color: #4c8dca;
+    background-image: none;
+  }
+
+  .alert-danger {
+    color: #ffb5b9;
+    background-color: #402326;
+    background-image: none;
+    border-color: #8b434b;
+    text-shadow: none;
+  }
+}
